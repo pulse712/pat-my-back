@@ -21,3 +21,32 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* Ensure all form inputs are interactive */
+input,
+textarea,
+select,
+button {
+  pointer-events: auto;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  appearance: auto;
+  -webkit-appearance: auto;
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 1;
+  cursor: text;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
