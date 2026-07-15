@@ -6,6 +6,7 @@ import { db } from "@/lib/firebase";
 import { useAuth } from "@/context/AuthContext";
 import { AvailabilityStatus, Chat } from "@/types";
 import { useRouter } from "next/navigation";
+import { ChevronRight, Phone, Video } from "lucide-react";
 
 const statusOptions: { value: AvailabilityStatus; label: string; color: string }[] = [
   { value: "available", label: "Available", color: "bg-green-500" },

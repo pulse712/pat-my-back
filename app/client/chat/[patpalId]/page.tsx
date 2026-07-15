@@ -116,14 +116,14 @@ export default function ChatPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCallType("audio")}
-              className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors"
+              className="w-9 h-9 rounded-full bg-gray-100 hover:bg-green-50 hover:text-green-600 flex items-center justify-center text-gray-600 transition-colors"
               title="Audio call"
             >
               📞
             </button>
             <button
               onClick={() => setCallType("video")}
-              className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors"
+              className="w-9 h-9 rounded-full bg-gray-100 hover:bg-green-50 hover:text-green-600 flex items-center justify-center text-gray-600 transition-colors"
               title="Video call"
             >
               🎥

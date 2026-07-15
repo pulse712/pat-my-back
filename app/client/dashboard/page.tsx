@@ -8,6 +8,7 @@ import { PatPalProfile } from "@/types";
 import { DEMO_MODE, getDemoUsers } from "@/lib/demo-auth";
 import { useRouter } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
+import { Clock, ChevronRight, Bell } from "lucide-react";
 
 const CATEGORIES = [
   { emoji: "🎓", label: "Mentorship" },
@@ -57,13 +58,19 @@ export default function ClientDashboard() {
       <header className="sticky top-0 bg-white z-10 border-b border-gray-100">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-sm">
               <span className="text-white font-bold text-sm">P</span>
             </div>
             <span className="font-bold text-gray-900 text-lg">Pat My Back 👋</span>
           </div>
-          <div className="flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1.5">
-            <span className="text-xs font-semibold text-gray-600">0 min</span>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 bg-green-50 border border-green-100 rounded-full px-3 py-1.5">
+              <Clock size={13} className="text-green-600" />
+              <span className="text-xs font-semibold text-green-700">0 min</span>
+            </div>
+            <button className="w-9 h-9 rounded-full bg-gray-50 flex items-center justify-center">
+              <Bell size={18} className="text-gray-500" />
+            </button>
           </div>
         </div>
       </header>
@@ -122,7 +129,9 @@ export default function ClientDashboard() {
       <section className="mb-4">
         <div className="px-4 flex items-center justify-between mb-3">
           <h3 className="font-semibold text-gray-900 text-sm">Online now</h3>
-          <button className="text-green-500 text-xs font-medium">See all</button>
+          <button className="text-green-500 text-xs font-medium flex items-center gap-0.5">
+            See all <ChevronRight size={13} />
+          </button>
         </div>
         {loading ? (
           <div className="px-4 space-y-3">
