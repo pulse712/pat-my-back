@@ -6,21 +6,22 @@ import { AuthProvider } from "@/context/AuthContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PatPal — Connect with your Pat Pal",
-  description: "Get support and coaching from your personal Pat Pal",
+  title: "Pat My Back",
+  description: "Talk to a real person who has your back",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "PatPal",
+    title: "Pat My Back",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#6366f1",
+  themeColor: "#22c55e",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -45,8 +47,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
+      <body className={`${inter.className} bg-white`}>
+        <AuthProvider>
+          {/* Center content on desktop, full width on mobile */}
+          <div className="min-h-screen w-full max-w-md mx-auto bg-white relative shadow-none md:shadow-xl">
+            {children}
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
