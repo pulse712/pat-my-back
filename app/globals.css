@@ -42,10 +42,10 @@ select {
   appearance: auto;
   -webkit-appearance: auto;
   background-color: #ffffff !important;
-  color: #111111 !important;
+  color: #000000 !important;
   opacity: 1 !important;
   cursor: text;
-  caret-color: #111111 !important;
+  caret-color: #000000 !important;
 }
 
 input::placeholder,
@@ -58,9 +58,9 @@ textarea::placeholder {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #111111 !important;
+  -webkit-text-fill-color: #000000 !important;
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
-  caret-color: #111111 !important;
+  caret-color: #000000 !important;
 }
 
 input[type="radio"],
